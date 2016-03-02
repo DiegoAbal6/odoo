@@ -6,7 +6,12 @@
     'version': '1.0',
     'author': 'Odoo S.A.',
     'depends': ['website'],
-    'data': [ 'views/layout.xml' ],
+    'data': [
+  'views/layout.xml',
+  'views/pages.xml'
+   
+    
+],
     'images': [
         'static/description/cover.png',
     ],
