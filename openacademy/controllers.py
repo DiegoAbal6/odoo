@@ -2,7 +2,7 @@
 from openerp import http
 
 # class Openacademy(http.Controller):
-#     @http.route('/openacademy/openacademy/', auth='public')
+#    @http.route('/openacademy/openacademy/', auth='public')
 #     def index(self, **kw):
 #         return "Hello, world"
 
