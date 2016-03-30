@@ -3,29 +3,54 @@
 <data>
 
 <!-- === Services Page === -->
-<template name="Servicios" id="website.services" page="True">
+<template name="Services page" id="website.services" page="True">
   <t t-call="website.layout">
    <div id="wrap">
      <div class="container">
        <h1>Our Services</h1>
-       <ul class="servicios">
+       <ul class="services">
          <li>Cloud Hosting</li>
          <li>Support</li>
          <li>Unlimited space</li>
        </ul>
-       <!-- === Area de Snippets === -->
+       <!-- === Snippets' area === -->
        <div class="oe_structure" />
+      
      </div>
    </div>
   </t>
 </template>
-<!-- Nueva pestaña en el menu-->
+
+<!-- === Vacaciones Page === -->
+        <template name="Vacaciones page" id="website.vacaciones" page="True">
+            <t t-call="website.layout">
+                <div id="wrap2">
+                    <div class="container2">
+                        <img alt="vacaciones" class="img-square" src="/theme_diego/static/src/img/playa.png"/>
+                        
+                        Esto es una prueba de vacaciones
+                                                
+
+                        
+                    </div>
+                    
+                    
+                </div>
+            </t>
+        </template>
 <record id="services_page_link" model="website.menu">
   <field name="name">Services</field>
   <field name="url">/page/services</field>
   <field name="parent_id" ref="website.main_menu" />
   <field name="sequence" type="int">99</field>
 </record>
+
+<record id="services_page_link2" model="website.menu">
+            <field name="name">Vacaciones</field>
+            <field name="url">/page/vacaciones</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">99</field>
+        </record>
 
 </data>
 </openerp>
