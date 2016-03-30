@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "openacademyDAM",
+    'name': "openacademySXE",
 
     'summary': """
-        Modulo para clase de DAM""",
+        Modulo para SXE""",
 
     'description': """
         Long description del modulo bla bla bla
     """,
 
-    'author': "My Company DAM",
-    'website': "http://www.danielcastelao.com",
+    'author': "Diego Abal",
+    'website': "Odoo",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
