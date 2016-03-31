@@ -391,3 +391,82 @@ access_openacademy_openacademy,openacademy.openacademy,model_openacademy_openaca
 </openerp>
 
 ```
+
+###Último paso###
+
+Después de crear las carpetas con sus respectivos ficheros, crearemos un "__init__.py", "__openerp__.py" y "partner.py"
+
+**__init__.py**
+
+```java
+
+# -*- coding: utf-8 -*-
+
+from . import controllers
+from . import models
+
+```
+
+**__openerp__.py**
+
+```java
+
+# -*- coding: utf-8 -*-
+{
+    'name': "openacademySXE",
+
+    'summary': """
+        Modulo para SXE""",
+
+    'description': """
+        Long description del modulo bla bla bla
+    """,
+
+    'author': "Diego Abal",
+    'website': "Odoo",
+
+    # Categories can be used to filter modules in modules listing
+    # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
+    # for the full list
+    'category': 'Uncategorized',
+    'version': '4.0',
+
+    # any module necessary for this one to work correctly
+    'depends': ['base'],
+
+    # always loaded
+    'data': [
+        #'security/security.xml',
+        #'security/ir.model.access.csv',
+        #'views/views.xml',
+        #'views/templates.xml',
+        'views/openacademy.xml',
+    ],
+    # only loaded in demonstration mode
+    'demo': [
+        #'demo/demo.xml',
+    ],
+}
+
+```
+
+**partnet.py**
+
+```java
+
+# -*- coding: utf-8 -*-
+from openerp import fields, models
+
+class Partner(models.Model):
+    _inherit = 'res.partner'
+
+    # Add a new column to the res.partner model, by default partners are not
+    # instructors
+    instructor = fields.Boolean("Instructor", default=False)
+
+    session_ids = fields.Many2many('openacademy.session',
+        string="Attended Sessions", readonly=True)
+
+```
+
+####Espero que os haya servido de ayuda####
