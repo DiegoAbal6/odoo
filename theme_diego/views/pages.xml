@@ -21,6 +21,8 @@
   </t>
 </template>
 
+
+
 <!-- === Vacaciones Page === -->
         <template name="Vacaciones page" id="website.vacaciones" page="True">
             <t t-call="website.layout">
@@ -29,9 +31,7 @@
                         <img alt="vacaciones" class="img-square" src="/theme_diego/static/src/img/playa.png"/>
                         
                         Esto es una prueba de vacaciones
-                                                
 
-                        
                     </div>
                     
                     
@@ -50,6 +50,41 @@
             <field name="url">/page/vacaciones</field>
             <field name="parent_id" ref="website.main_menu" />
             <field name="sequence" type="int">99</field>
+        </record>
+        <template name="QuienesSomos page" id="website.quienessomos" page="True">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <h1>Quienes Somos</h1>
+                        <ul class="quienessomos">
+                            <li>
+                                <h3>Director</h3>
+                                <img src="/theme_29/static/img/foto1.jpg"  height="200" width="200"/>
+                                <h4>Manuel Agudo Durán</h4>
+                            </li>
+                            <li>
+                                <h3>Gerente</h3>
+                                <img src="/theme_29/static/img/foto2.jpg"  height="200" width="200"/>
+                                <h4>Iago Aspas Juncal</h4>
+                            </li>
+                            <li>
+                                <h3>Jefe de personal</h3>
+                                <img src="/theme_29/static/img/foto3.JPG"  height="200" width="200"/>
+                                <h4>John Guidetti</h4>
+                            </li>
+                        </ul>
+                        <!-- === Snippets' area === -->
+                        <div class="oe_structure" />
+                    </div>
+                </div>
+            </t>
+        </template>
+        
+         <record id="quienessomos_page_link" model="website.menu">
+            <field name="name">Quienes Somos</field>
+            <field name="url">/page/quienessomos</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">80</field>
         </record>
 
 </data>
