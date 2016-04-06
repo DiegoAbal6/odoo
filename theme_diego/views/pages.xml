@@ -59,18 +59,18 @@
                         <ul class="quienessomos">
                             <li>
                                 <h3>Director</h3>
-                                <img src="/theme_29/static/img/foto1.jpg"  height="200" width="200"/>
+                                <img src="/theme_diego/static/img/foto1.png"  height="200" width="200"/>
                                 <h4>Manuel Agudo Durán</h4>
                             </li>
                             <li>
                                 <h3>Gerente</h3>
-                                <img src="/theme_29/static/img/foto2.jpg"  height="200" width="200"/>
+                                <img src="/theme_diego/static/img/foto2.png"  height="200" width="200"/>
                                 <h4>Iago Aspas Juncal</h4>
                             </li>
                             <li>
                                 <h3>Jefe de personal</h3>
-                                <img src="/theme_29/static/img/foto3.JPG"  height="200" width="200"/>
-                                <h4>John Guidetti</h4>
+                                <img src="/theme_diego/static/img/foto3.png"  height="200" width="200"/>
+                                <h4>Fabián Orellana Valenzuela</h4>
                             </li>
                         </ul>
                         <!-- === Snippets' area === -->
