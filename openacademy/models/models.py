@@ -2,6 +2,12 @@
 
 from openerp import models, fields, api
 
+class Aulas(models.Model):
+    _name = 'openacademy.aulas'
+    
+    name = fields.Char(string="Title", required=True)
+    description = fields.Text() 
+
 class Course(models.Model):
     _name = 'openacademy.course'
 
@@ -23,3 +29,6 @@ class Session(models.Model):
     instructor_id = fields.Many2one('res.partner', string="Instructor")
     course_id = fields.Many2one('openacademy.course',
         ondelete='cascade', string="Curso", required=True)
+
+
+

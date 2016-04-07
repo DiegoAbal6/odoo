@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
+            
+        <record model="ir.ui.view" id="aula_form_view">
+            <field name="name">aula.form</field>
+            <field name="model">openacademy.aulas</field>
+            <field name="arch" type="xml">
+                <form string="Aulas Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="aula_list_action">
+            <field name="name">Aulas</field>
+            <field name="res_model">openacademy.aulas</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem id="aulas_menu" name="Aulas"
+                  parent="openacademy_menu"
+                  action="aula_list_action"/>
+
         <record model="ir.ui.view" id="course_form_view">
             <field name="name">course.form</field>
             <field name="model">openacademy.course</field>
@@ -128,9 +154,12 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-             
+        
+
         <menuitem id="session_menu" name="Sessions"
                        parent="openacademy_menu"
                        action="session_list_action"/>
+
+        
     </data>
 </openerp>
